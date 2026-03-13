@@ -73,7 +73,8 @@ def query_document(vectorstore_path: str, question: str) -> dict:
     vectorstore = FAISS.load_local(
         vectorstore_path,
         embeddings,
-        allow_dangerous_deserialization=True,
+        allow_dangerous_deserialization=True, 
+    
     )
 
     # Set up retriever
